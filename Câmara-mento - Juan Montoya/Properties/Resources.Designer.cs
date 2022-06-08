@@ -163,26 +163,6 @@ namespace Câmara_mento___Juan_Montoya.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Monitor_Down {
-            get {
-                object obj = ResourceManager.GetObject("Monitor_Down", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Monitor_Up {
-            get {
-                object obj = ResourceManager.GetObject("Monitor_Up", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Office_Lighted {
             get {
                 object obj = ResourceManager.GetObject("Office_Lighted", resourceCulture);

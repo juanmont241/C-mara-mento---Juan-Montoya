@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OfficeScreen));
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.bringCamera = new System.Windows.Forms.PictureBox();
             this.hideTable = new System.Windows.Forms.PictureBox();
+            this.CamDown = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CamDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -58,11 +63,30 @@
             this.hideTable.BackColor = System.Drawing.Color.Transparent;
             this.hideTable.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.TableButton;
             this.hideTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.hideTable.Location = new System.Drawing.Point(340, 587);
+            this.hideTable.Location = new System.Drawing.Point(346, 554);
             this.hideTable.Name = "hideTable";
             this.hideTable.Size = new System.Drawing.Size(368, 50);
             this.hideTable.TabIndex = 1;
             this.hideTable.TabStop = false;
+            // 
+            // CamDown
+            // 
+            this.CamDown.Image = ((System.Drawing.Image)(resources.GetObject("CamDown.Image")));
+            this.CamDown.Location = new System.Drawing.Point(73, 126);
+            this.CamDown.Name = "CamDown";
+            this.CamDown.Size = new System.Drawing.Size(958, 537);
+            this.CamDown.TabIndex = 2;
+            this.CamDown.TabStop = false;
+            this.CamDown.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(442, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // OfficeScreen
             // 
@@ -70,12 +94,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Office_Lighted;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.hideTable);
             this.Controls.Add(this.bringCamera);
+            this.Controls.Add(this.CamDown);
             this.Name = "OfficeScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CamDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,5 +113,7 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox bringCamera;
         private System.Windows.Forms.PictureBox hideTable;
+        private System.Windows.Forms.PictureBox CamDown;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

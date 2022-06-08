@@ -10,24 +10,11 @@ using System.Windows.Forms;
 
 namespace Câmara_mento___Juan_Montoya
 {
-    public partial class OfficeScreen : UserControl
+    public partial class LockerScreen : UserControl
     {
-        public OfficeScreen()
+        public LockerScreen()
         {
             InitializeComponent();
         }
-
-        private void gameTimer_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bringCamera_Click(object sender, EventArgs e)
-        {
-            
-            
-            //CamDown.Visible = true;
-        }
-
     }
 }

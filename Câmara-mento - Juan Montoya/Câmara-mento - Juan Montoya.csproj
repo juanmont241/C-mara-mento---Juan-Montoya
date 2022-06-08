@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LockerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LockerScreen.Designer.cs">
+      <DependentUpon>LockerScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mascot.cs" />
     <Compile Include="Screens\OfficeScreen.cs">
       <SubType>UserControl</SubType>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LockerScreen.resx">
+      <DependentUpon>LockerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\OfficeScreen.resx">
       <DependentUpon>OfficeScreen.cs</DependentUpon>
@@ -136,6 +145,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Camup.webp" />
     <None Include="Resources\GameMenu.png" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cam Change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camup.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
