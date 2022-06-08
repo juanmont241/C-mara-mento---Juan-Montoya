@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CameraWaitScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CameraWaitScreen.Designer.cs">
+      <DependentUpon>CameraWaitScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CharPrepScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CharPrepScreen.Designer.cs">
+      <DependentUpon>CharPrepScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LockerScreen.cs">
+    <Compile Include="RoofScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LockerScreen.Designer.cs">
+    <Compile Include="RoofScreen.Designer.cs">
+      <DependentUpon>RoofScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LockerScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\LockerScreen.Designer.cs">
       <DependentUpon>LockerScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Mascot.cs" />
@@ -97,10 +115,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CameraWaitScreen.resx">
+      <DependentUpon>CameraWaitScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharPrepScreen.resx">
+      <DependentUpon>CharPrepScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LockerScreen.resx">
+    <EmbeddedResource Include="RoofScreen.resx">
+      <DependentUpon>RoofScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LockerScreen.resx">
       <DependentUpon>LockerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\OfficeScreen.resx">
@@ -198,6 +225,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Camup.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Char Prep.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locker_Room.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roof.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Five_nights_camara_layout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

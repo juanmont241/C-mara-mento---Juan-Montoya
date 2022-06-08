@@ -103,6 +103,16 @@ namespace Câmara_mento___Juan_Montoya.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Five_nights_camara_layout {
+            get {
+                object obj = ResourceManager.GetObject("Five_nights_camara_layout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GameMenu {
             get {
                 object obj = ResourceManager.GetObject("GameMenu", resourceCulture);
@@ -136,16 +146,6 @@ namespace Câmara_mento___Juan_Montoya.Properties {
         internal static System.Drawing.Bitmap Locker_Room {
             get {
                 object obj = ResourceManager.GetObject("Locker_Room", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Locker_Undying {
-            get {
-                object obj = ResourceManager.GetObject("Locker_Undying", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,6 +1,6 @@
 ﻿namespace Câmara_mento___Juan_Montoya
 {
-    partial class LockerScreen
+    partial class CharPrepScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,11 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // LockerScreen
+            // CharPrepScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "LockerScreen";
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Char_Prep;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Name = "CharPrepScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             this.ResumeLayout(false);
 

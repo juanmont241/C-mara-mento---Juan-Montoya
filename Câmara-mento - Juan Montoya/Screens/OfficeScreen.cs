@@ -24,8 +24,18 @@ namespace Câmara_mento___Juan_Montoya
 
         private void bringCamera_Click(object sender, EventArgs e)
         {
-            
-            
+            CamUp.Visible = true;
+
+            Thread(1000);
+
+            //CameraWaitScreen cws = new CameraWaitScreen();
+            //Form form = this.FindForm();
+
+            //form.Controls.Add(cws);
+            //form.Controls.Remove(this);
+
+            //cws.Location = new Point((form.Width - cws.Width) / 2, (form.Height - cws.Height) / 2);
+
             //CamDown.Visible = true;
         }
 
