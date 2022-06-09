@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OfficeScreen));
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.bringCamera = new System.Windows.Forms.PictureBox();
             this.hideTable = new System.Windows.Forms.PictureBox();
-            this.CamUp = new System.Windows.Forms.PictureBox();
+            this.CamDownTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CamUp)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -66,18 +64,13 @@
             this.hideTable.Size = new System.Drawing.Size(368, 50);
             this.hideTable.TabIndex = 1;
             this.hideTable.TabStop = false;
+            this.hideTable.Click += new System.EventHandler(this.hideTable_Click);
             // 
-            // CamUp
+            // CamDownTimer
             // 
-            this.CamUp.BackColor = System.Drawing.Color.Transparent;
-            this.CamUp.Image = ((System.Drawing.Image)(resources.GetObject("CamUp.Image")));
-            this.CamUp.Location = new System.Drawing.Point(-20, 3);
-            this.CamUp.Name = "CamUp";
-            this.CamUp.Size = new System.Drawing.Size(1111, 636);
-            this.CamUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.CamUp.TabIndex = 3;
-            this.CamUp.TabStop = false;
-            this.CamUp.Visible = false;
+            this.CamDownTimer.Enabled = true;
+            this.CamDownTimer.Interval = 500;
+            this.CamDownTimer.Tick += new System.EventHandler(this.CamDownTimer_Tick);
             // 
             // OfficeScreen
             // 
@@ -87,21 +80,18 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.hideTable);
             this.Controls.Add(this.bringCamera);
-            this.Controls.Add(this.CamUp);
             this.Name = "OfficeScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CamUp)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox bringCamera;
         private System.Windows.Forms.PictureBox hideTable;
-        private System.Windows.Forms.PictureBox CamUp;
+        private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Timer CamDownTimer;
     }
 }

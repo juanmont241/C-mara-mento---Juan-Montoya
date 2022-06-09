@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace Câmara_mento___Juan_Montoya
 {
-    public partial class RoofScreen : UserControl
+    public partial class CameraWaitScreen : UserControl
     {
-        public RoofScreen()
+        public CameraWaitScreen()
         {
             InitializeComponent();
         }
 
-        private void cam2_Click(object sender, EventArgs e)
+        private void CamUpTimer_Tick(object sender, EventArgs e)
         {
-            Form1.ChangeScreen(this, new CharPrepScreen());
+            CamUp.Visible = false;
+        }
+
+        private void cam1_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new LockerScreen());
         }
 
         private void cam5_Click(object sender, EventArgs e)
@@ -27,9 +32,9 @@ namespace Câmara_mento___Juan_Montoya
             Form1.ChangeScreen(this, new RoofScreen());
         }
 
-        private void cam1_Click(object sender, EventArgs e)
+        private void cam2_Click(object sender, EventArgs e)
         {
-            Form1.ChangeScreen(this, new LockerScreen());
+            Form1.ChangeScreen(this, new CharPrepScreen());
         }
 
         private void bringOutCamera_Click(object sender, EventArgs e)

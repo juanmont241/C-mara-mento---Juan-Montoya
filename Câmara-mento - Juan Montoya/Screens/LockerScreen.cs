@@ -16,5 +16,25 @@ namespace Câmara_mento___Juan_Montoya
         {
             InitializeComponent();
         }
+
+        private void cam1_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new LockerScreen());
+        }
+
+        private void cam2_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new CharPrepScreen());
+        }
+
+        private void cam5_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new RoofScreen());
+        }
+
+        private void bringOutCamera_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new OfficeScreen());
+        }
     }
 }

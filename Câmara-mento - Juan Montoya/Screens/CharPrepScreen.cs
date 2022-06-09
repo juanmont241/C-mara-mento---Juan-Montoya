@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Câmara_mento___Juan_Montoya
 {
-    public partial class RoofScreen : UserControl
+    public partial class CharPrepScreen : UserControl
     {
-        public RoofScreen()
+        public CharPrepScreen()
         {
             InitializeComponent();
         }

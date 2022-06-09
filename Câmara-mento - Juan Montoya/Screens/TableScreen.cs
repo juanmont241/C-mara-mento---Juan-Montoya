@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Câmara_mento___Juan_Montoya
 {
-    public partial class CameraWaitScreen : UserControl
+    public partial class TableScreen : UserControl
     {
-        public CameraWaitScreen()
+        public TableScreen()
         {
             InitializeComponent();
+        }
+
+        private void hideTable_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new OfficeScreen());
         }
     }
 }

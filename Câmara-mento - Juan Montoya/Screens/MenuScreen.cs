@@ -24,24 +24,12 @@ namespace Câmara_mento___Juan_Montoya
 
         private void newGameLabel_Click(object sender, EventArgs e)
         {
-            GameMenuScreen ng = new GameMenuScreen();
-            Form form = this.FindForm();
-
-            form.Controls.Add(ng);
-            form.Controls.Remove(this);
-
-            ng.Location = new Point((form.Width - ng.Width) / 2, (form.Height - ng.Height) / 2);
+            Form1.ChangeScreen(this, new GameMenuScreen());
         }
 
         private void howToPlayLabel_Click(object sender, EventArgs e)
         {
-            HowToPlayScreen gs = new HowToPlayScreen();
-            Form form = this.FindForm();
-
-            form.Controls.Add(gs);
-            form.Controls.Remove(this);
-
-            gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+            Form1.ChangeScreen(this, new HowToPlayScreen());
         }
     }
 }

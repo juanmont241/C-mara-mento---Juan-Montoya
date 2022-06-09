@@ -1,6 +1,6 @@
 ﻿namespace Câmara_mento___Juan_Montoya
 {
-    partial class LockerScreen
+    partial class CharPrepScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LockerScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CharPrepScreen));
             this.cam6 = new System.Windows.Forms.PictureBox();
             this.cam2 = new System.Windows.Forms.PictureBox();
             this.cam5 = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,7 @@
             // 
             this.cam6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cam6.BackgroundImage")));
             this.cam6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cam6.Location = new System.Drawing.Point(936, 566);
+            this.cam6.Location = new System.Drawing.Point(939, 566);
             this.cam6.Name = "cam6";
             this.cam6.Size = new System.Drawing.Size(77, 56);
             this.cam6.TabIndex = 10;
@@ -57,7 +57,7 @@
             // 
             this.cam2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cam2.BackgroundImage")));
             this.cam2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cam2.Location = new System.Drawing.Point(948, 428);
+            this.cam2.Location = new System.Drawing.Point(951, 428);
             this.cam2.Name = "cam2";
             this.cam2.Size = new System.Drawing.Size(77, 56);
             this.cam2.TabIndex = 9;
@@ -68,7 +68,7 @@
             // 
             this.cam5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cam5.BackgroundImage")));
             this.cam5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cam5.Location = new System.Drawing.Point(784, 566);
+            this.cam5.Location = new System.Drawing.Point(787, 566);
             this.cam5.Name = "cam5";
             this.cam5.Size = new System.Drawing.Size(87, 56);
             this.cam5.TabIndex = 8;
@@ -79,7 +79,7 @@
             // 
             this.cam1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cam1.BackgroundImage")));
             this.cam1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cam1.Location = new System.Drawing.Point(784, 426);
+            this.cam1.Location = new System.Drawing.Point(787, 426);
             this.cam1.Name = "cam1";
             this.cam1.Size = new System.Drawing.Size(77, 58);
             this.cam1.TabIndex = 7;
@@ -90,7 +90,7 @@
             // 
             this.camMap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("camMap.BackgroundImage")));
             this.camMap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.camMap.Location = new System.Drawing.Point(749, 403);
+            this.camMap.Location = new System.Drawing.Point(752, 403);
             this.camMap.Name = "camMap";
             this.camMap.Size = new System.Drawing.Size(307, 219);
             this.camMap.TabIndex = 6;
@@ -101,19 +101,19 @@
             this.bringOutCamera.BackColor = System.Drawing.Color.Transparent;
             this.bringOutCamera.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Bring_Up_Monitor;
             this.bringOutCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bringOutCamera.Location = new System.Drawing.Point(35, 423);
+            this.bringOutCamera.Location = new System.Drawing.Point(33, 403);
             this.bringOutCamera.Name = "bringOutCamera";
             this.bringOutCamera.Size = new System.Drawing.Size(86, 225);
             this.bringOutCamera.TabIndex = 11;
             this.bringOutCamera.TabStop = false;
             this.bringOutCamera.Click += new System.EventHandler(this.bringOutCamera_Click);
             // 
-            // LockerScreen
+            // CharPrepScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Locker_Room;
+            this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Char_Prep;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.bringOutCamera);
             this.Controls.Add(this.cam6);
@@ -121,7 +121,7 @@
             this.Controls.Add(this.cam5);
             this.Controls.Add(this.cam1);
             this.Controls.Add(this.camMap);
-            this.Name = "LockerScreen";
+            this.Name = "CharPrepScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).EndInit();
