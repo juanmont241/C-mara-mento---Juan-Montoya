@@ -101,7 +101,7 @@
             this.bringOutCamera.BackColor = System.Drawing.Color.Transparent;
             this.bringOutCamera.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Bring_Up_Monitor;
             this.bringOutCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bringOutCamera.Location = new System.Drawing.Point(35, 423);
+            this.bringOutCamera.Location = new System.Drawing.Point(36, 397);
             this.bringOutCamera.Name = "bringOutCamera";
             this.bringOutCamera.Size = new System.Drawing.Size(86, 225);
             this.bringOutCamera.TabIndex = 11;

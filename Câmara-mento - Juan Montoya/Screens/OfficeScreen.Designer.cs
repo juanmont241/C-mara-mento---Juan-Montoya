@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OfficeScreen));
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.bringCamera = new System.Windows.Forms.PictureBox();
             this.hideTable = new System.Windows.Forms.PictureBox();
             this.CamDownTimer = new System.Windows.Forms.Timer(this.components);
+            this.camDown = new System.Windows.Forms.PictureBox();
+            this.amTimer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camDown)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -72,19 +76,43 @@
             this.CamDownTimer.Interval = 500;
             this.CamDownTimer.Tick += new System.EventHandler(this.CamDownTimer_Tick);
             // 
+            // camDown
+            // 
+            this.camDown.Image = ((System.Drawing.Image)(resources.GetObject("camDown.Image")));
+            this.camDown.Location = new System.Drawing.Point(3, 0);
+            this.camDown.Name = "camDown";
+            this.camDown.Size = new System.Drawing.Size(1085, 619);
+            this.camDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.camDown.TabIndex = 2;
+            this.camDown.TabStop = false;
+            // 
+            // amTimer
+            // 
+            this.amTimer.AutoSize = true;
+            this.amTimer.Font = new System.Drawing.Font("Vladimir Script", 36F);
+            this.amTimer.Location = new System.Drawing.Point(908, 17);
+            this.amTimer.Name = "amTimer";
+            this.amTimer.Size = new System.Drawing.Size(130, 73);
+            this.amTimer.TabIndex = 3;
+            this.amTimer.Text = "clock";
+            // 
             // OfficeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Office_Lighted;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.amTimer);
             this.Controls.Add(this.hideTable);
             this.Controls.Add(this.bringCamera);
+            this.Controls.Add(this.camDown);
             this.Name = "OfficeScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camDown)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,5 +121,7 @@
         private System.Windows.Forms.PictureBox hideTable;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Timer CamDownTimer;
+        private System.Windows.Forms.PictureBox camDown;
+        private System.Windows.Forms.Label amTimer;
     }
 }

@@ -56,11 +56,11 @@
             // CamUp
             // 
             this.CamUp.BackColor = System.Drawing.Color.Black;
-            this.CamUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CamUp.BackgroundImage")));
             this.CamUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CamUp.Location = new System.Drawing.Point(3, 0);
+            this.CamUp.Image = ((System.Drawing.Image)(resources.GetObject("CamUp.Image")));
+            this.CamUp.Location = new System.Drawing.Point(0, -21);
             this.CamUp.Name = "CamUp";
-            this.CamUp.Size = new System.Drawing.Size(1088, 627);
+            this.CamUp.Size = new System.Drawing.Size(1088, 657);
             this.CamUp.TabIndex = 0;
             this.CamUp.TabStop = false;
             // 

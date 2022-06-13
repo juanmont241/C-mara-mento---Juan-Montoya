@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Screens\6amScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\6amScreen.Designer.cs">
+      <DependentUpon>6amScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\CameraWaitScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,10 +70,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoofScreen.cs">
+    <Compile Include="Screens\RoofScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RoofScreen.Designer.cs">
+    <Compile Include="Screens\RoofScreen.Designer.cs">
       <DependentUpon>RoofScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\LockerScreen.cs">
@@ -121,6 +127,9 @@
     <Compile Include="Screens\TableScreen.Designer.cs">
       <DependentUpon>TableScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Screens\6amScreen.resx">
+      <DependentUpon>6amScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\CameraWaitScreen.resx">
       <DependentUpon>CameraWaitScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,7 +139,7 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoofScreen.resx">
+    <EmbeddedResource Include="Screens\RoofScreen.resx">
       <DependentUpon>RoofScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\LockerScreen.resx">
@@ -246,6 +255,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Five_nights_camara_layout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VictoryScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VictoryScreen .png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

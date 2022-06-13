@@ -20,6 +20,9 @@ namespace Câmara_mento___Juan_Montoya
         private void CamUpTimer_Tick(object sender, EventArgs e)
         {
             CamUp.Visible = false;
+
+            OfficeScreen.endTimer++;
+            OfficeScreen.clockTimer();
         }
 
         private void cam1_Click(object sender, EventArgs e)
