@@ -14,10 +14,21 @@ namespace Câmara_mento___Juan_Montoya
     {
         public static int endTimer;
 
+        Mascot Undying;
+        Mascot Bridget;
+        Mascot TheFace;
+        Mascot Jake;
+
         public OfficeScreen()
         {
+            SetUpMascots();
             InitializeComponent();
             
+        }
+
+       public void SetUpMascots()
+        {
+            Undying = new Mascot(Table, LockerScreen, 500 , 600);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -25,48 +36,46 @@ namespace Câmara_mento___Juan_Montoya
             endTimer++;
 
             clockTimer();
-           
-
 
         }
 
         public void clockTimer()
+
         {
-            if (endTimer >= 10 && endTimer <= 30)
+            if (endTimer < 600)
             {
                 amTimer.Text = "12am";
             }
-            
 
-            if (endTimer > 30 && endTimer <= 50)
-             {
+            if (endTimer >= 600 && endTimer <= 1200)
+            {
                 amTimer.Text = "1am";
-             }
+            }
 
-            //else if (endTimer == 12000)
-            //{
-            //    amTimer.Text = "2am";
-            //}
 
-            //else if (endTimer == 180000)
-            //{
-            //    amTimer.Text = "3am";
-            //}
+            else if (endTimer > 1200 && endTimer <= 1800)
+            {
+                amTimer.Text = "2am";
+            }
 
-            //else if (endTimer == 240000)
-            //{
-            //    amTimer.Text = "4am";
-            //}
+            else if (endTimer > 1800 && endTimer <= 2400)
+            {
+                amTimer.Text = "3am";
+            }
 
-            //else if (endTimer == 300000)
-            //{
-            //    amTimer.Text = "5am";
-            //}
+            else if (endTimer > 2400 && endTimer <= 3000)
+            {
+                amTimer.Text = "4am";
+            }
 
-            else if (endTimer == 60)
+            else if (endTimer > 3000 && endTimer <= 3600)
+            {
+                amTimer.Text = "5am";
+            }
+
+            else if (endTimer == 4200)
             {
                 victoryResults();
-                
             }
         }
 

@@ -51,7 +51,7 @@
             this.bringCamera.BackColor = System.Drawing.Color.Transparent;
             this.bringCamera.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Bring_Up_Monitor;
             this.bringCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bringCamera.Location = new System.Drawing.Point(27, 17);
+            this.bringCamera.Location = new System.Drawing.Point(27, 34);
             this.bringCamera.Name = "bringCamera";
             this.bringCamera.Size = new System.Drawing.Size(86, 225);
             this.bringCamera.TabIndex = 0;
@@ -89,8 +89,9 @@
             // amTimer
             // 
             this.amTimer.AutoSize = true;
+            this.amTimer.BackColor = System.Drawing.Color.White;
             this.amTimer.Font = new System.Drawing.Font("Vladimir Script", 36F);
-            this.amTimer.Location = new System.Drawing.Point(908, 17);
+            this.amTimer.Location = new System.Drawing.Point(916, 34);
             this.amTimer.Name = "amTimer";
             this.amTimer.Size = new System.Drawing.Size(130, 73);
             this.amTimer.TabIndex = 3;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoofScreen));
             this.cam6 = new System.Windows.Forms.PictureBox();
             this.cam2 = new System.Windows.Forms.PictureBox();
@@ -35,6 +36,8 @@
             this.cam1 = new System.Windows.Forms.PictureBox();
             this.camMap = new System.Windows.Forms.PictureBox();
             this.bringOutCamera = new System.Windows.Forms.PictureBox();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.amTimer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam5)).BeginInit();
@@ -108,6 +111,22 @@
             this.bringOutCamera.TabStop = false;
             this.bringOutCamera.Click += new System.EventHandler(this.bringOutCamera_Click);
             // 
+            // gameTimer
+            // 
+            this.gameTimer.Enabled = true;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
+            // amTimer
+            // 
+            this.amTimer.AutoSize = true;
+            this.amTimer.BackColor = System.Drawing.Color.White;
+            this.amTimer.Font = new System.Drawing.Font("Vladimir Script", 36F);
+            this.amTimer.Location = new System.Drawing.Point(923, 38);
+            this.amTimer.Name = "amTimer";
+            this.amTimer.Size = new System.Drawing.Size(130, 73);
+            this.amTimer.TabIndex = 12;
+            this.amTimer.Text = "clock";
+            // 
             // RoofScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,6 +134,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Roof;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.amTimer);
             this.Controls.Add(this.bringOutCamera);
             this.Controls.Add(this.cam6);
             this.Controls.Add(this.cam2);
@@ -130,6 +150,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,5 +162,7 @@
         private System.Windows.Forms.PictureBox cam1;
         private System.Windows.Forms.PictureBox camMap;
         private System.Windows.Forms.PictureBox bringOutCamera;
+        private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label amTimer;
     }
 }
