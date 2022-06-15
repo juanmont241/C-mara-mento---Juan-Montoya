@@ -38,12 +38,16 @@
             this.bringOutCamera = new System.Windows.Forms.PictureBox();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.amTimer = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TurnOff = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).BeginInit();
             this.SuspendLayout();
             // 
             // cam6
@@ -127,6 +131,25 @@
             this.amTimer.TabIndex = 12;
             this.amTimer.Text = "clock";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // TurnOff
+            // 
+            this.TurnOff.Image = ((System.Drawing.Image)(resources.GetObject("TurnOff.Image")));
+            this.TurnOff.Location = new System.Drawing.Point(620, 530);
+            this.TurnOff.Name = "TurnOff";
+            this.TurnOff.Size = new System.Drawing.Size(110, 92);
+            this.TurnOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TurnOff.TabIndex = 14;
+            this.TurnOff.TabStop = false;
+            this.TurnOff.Click += new System.EventHandler(this.TurnOff_Click);
+            // 
             // LockerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,6 +157,8 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Locker_Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.TurnOff);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.amTimer);
             this.Controls.Add(this.bringOutCamera);
             this.Controls.Add(this.cam6);
@@ -149,6 +174,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cam1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +191,7 @@
         private System.Windows.Forms.PictureBox bringOutCamera;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label amTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox TurnOff;
     }
 }

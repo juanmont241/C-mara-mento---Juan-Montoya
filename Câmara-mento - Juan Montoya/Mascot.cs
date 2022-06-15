@@ -8,25 +8,48 @@ namespace Câmara_mento___Juan_Montoya
 {
     internal class Mascot
     {
-        public string attackType;
+        public static int attackType;
 
-        public string currentPostion;
+        public static int currentPostion;
 
-        public int moveTimer;
+        public static int moveTimer;
 
-        public int killTimer;
+        public static int killTimer;
 
-        public Mascot(string _attackType, string _currentPostion, int _moveTimer, int _killTimer)
+        public Mascot(int _attackType, int _currentPostion, int _moveTimer, int _killTimer)
         {
-            _attackType = _attackType;
-            _currentPostion = _currentPostion;
-            _moveTimer = _moveTimer;
-            _killTimer = _killTimer;
+            attackType = _attackType;
+            currentPostion = _currentPostion;
+            moveTimer = _moveTimer;
+            killTimer = _killTimer;
         }
 
-        void move(string moveTimer, OfficeScreen m)
+        void move(int currentPosition, OfficeScreen m)
         {
+            moveTimer--;
 
+            //----------The Face Postions-------------//
+
+             if (currentPostion == 4 && moveTimer == 0)
+            {
+                RoofScreen.FaceCam.Visible = true;
+                currentPostion = 2;
+                
+                if (GameMenuScreen.Difficulty == 1)
+                {
+
+                }
+
+                else if (GameMenuScreen.Difficulty == 2)
+                {
+
+                }
+
+                else if (GameMenuScreen.Difficulty == 3)
+                {
+
+                }
+            }
         }
 
         //boolean kill(int killTimer, OfficeScreen k)

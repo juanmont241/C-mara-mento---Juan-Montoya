@@ -87,5 +87,10 @@ namespace Câmara_mento___Juan_Montoya
         {
             Form1.ChangeScreen(this, new _6amScreen());
         }
+
+        private void TurnOff_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

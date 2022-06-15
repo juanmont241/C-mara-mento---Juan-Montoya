@@ -19,6 +19,8 @@ namespace Câmara_mento___Juan_Montoya
         Mascot TheFace;
         Mascot Jake;
 
+        Random randGen = new Random(); //Declaring the Random Genrator
+
         public OfficeScreen()
         {
             SetUpMascots();
@@ -28,14 +30,23 @@ namespace Câmara_mento___Juan_Montoya
 
        public void SetUpMascots()
         {
-            Undying = new Mascot(Table, LockerScreen, 500 , 600);
+            //
+            //  0=Office,  1=Char Prep,   2=Roof,   3=Locker,   4=OutOfBounds(Face),  5=OutOfBounds(Jake),   6=OutOfBounds(Undying)
+            //
+            Undying = new Mascot(2, 6, Mascot.moveTimer, Mascot.killTimer);
+            Jake = new Mascot(1, 5, Mascot.moveTimer, Mascot.killTimer);
+            TheFace = new Mascot(1, 4, Mascot.moveTimer, Mascot.killTimer);
+            
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             endTimer++;
 
+            Undying.move();
+            SetUpMascots();
             clockTimer();
+
 
         }
 
