@@ -38,12 +38,14 @@
             this.bringOutCamera = new System.Windows.Forms.PictureBox();
             this.amTimer = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.JakeCam = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JakeCam)).BeginInit();
             this.SuspendLayout();
             // 
             // cam6
@@ -127,6 +129,17 @@
             this.gameTimer.Enabled = true;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
+            // JakeCam
+            // 
+            this.JakeCam.Image = ((System.Drawing.Image)(resources.GetObject("JakeCam.Image")));
+            this.JakeCam.Location = new System.Drawing.Point(13, -59);
+            this.JakeCam.Name = "JakeCam";
+            this.JakeCam.Size = new System.Drawing.Size(851, 664);
+            this.JakeCam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.JakeCam.TabIndex = 13;
+            this.JakeCam.TabStop = false;
+            this.JakeCam.Visible = false;
+            // 
             // CharPrepScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,6 +154,7 @@
             this.Controls.Add(this.cam5);
             this.Controls.Add(this.cam1);
             this.Controls.Add(this.camMap);
+            this.Controls.Add(this.JakeCam);
             this.Name = "CharPrepScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).EndInit();
@@ -149,6 +163,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cam1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JakeCam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +179,6 @@
         private System.Windows.Forms.PictureBox bringOutCamera;
         private System.Windows.Forms.Label amTimer;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.PictureBox JakeCam;
     }
 }

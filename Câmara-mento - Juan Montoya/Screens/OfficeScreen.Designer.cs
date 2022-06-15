@@ -36,9 +36,15 @@
             this.CamDownTimer = new System.Windows.Forms.Timer(this.components);
             this.camDown = new System.Windows.Forms.PictureBox();
             this.amTimer = new System.Windows.Forms.Label();
+            this.FaceOffice = new System.Windows.Forms.PictureBox();
+            this.JakeOffice = new System.Windows.Forms.PictureBox();
+            this.UndyingOffice = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.camDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaceOffice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JakeOffice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UndyingOffice)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -97,6 +103,42 @@
             this.amTimer.TabIndex = 3;
             this.amTimer.Text = "clock";
             // 
+            // FaceOffice
+            // 
+            this.FaceOffice.BackColor = System.Drawing.Color.Transparent;
+            this.FaceOffice.Image = ((System.Drawing.Image)(resources.GetObject("FaceOffice.Image")));
+            this.FaceOffice.Location = new System.Drawing.Point(-834, -58);
+            this.FaceOffice.Name = "FaceOffice";
+            this.FaceOffice.Size = new System.Drawing.Size(2568, 923);
+            this.FaceOffice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FaceOffice.TabIndex = 4;
+            this.FaceOffice.TabStop = false;
+            this.FaceOffice.Visible = false;
+            // 
+            // JakeOffice
+            // 
+            this.JakeOffice.BackColor = System.Drawing.Color.Transparent;
+            this.JakeOffice.Image = ((System.Drawing.Image)(resources.GetObject("JakeOffice.Image")));
+            this.JakeOffice.Location = new System.Drawing.Point(534, 55);
+            this.JakeOffice.Name = "JakeOffice";
+            this.JakeOffice.Size = new System.Drawing.Size(655, 473);
+            this.JakeOffice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.JakeOffice.TabIndex = 5;
+            this.JakeOffice.TabStop = false;
+            this.JakeOffice.Visible = false;
+            // 
+            // UndyingOffice
+            // 
+            this.UndyingOffice.BackColor = System.Drawing.Color.Transparent;
+            this.UndyingOffice.Image = ((System.Drawing.Image)(resources.GetObject("UndyingOffice.Image")));
+            this.UndyingOffice.Location = new System.Drawing.Point(-113, -278);
+            this.UndyingOffice.Name = "UndyingOffice";
+            this.UndyingOffice.Size = new System.Drawing.Size(1237, 1036);
+            this.UndyingOffice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UndyingOffice.TabIndex = 6;
+            this.UndyingOffice.TabStop = false;
+            this.UndyingOffice.Visible = false;
+            // 
             // OfficeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,11 +149,17 @@
             this.Controls.Add(this.hideTable);
             this.Controls.Add(this.bringCamera);
             this.Controls.Add(this.camDown);
+            this.Controls.Add(this.FaceOffice);
+            this.Controls.Add(this.JakeOffice);
+            this.Controls.Add(this.UndyingOffice);
             this.Name = "OfficeScreen";
             this.Size = new System.Drawing.Size(1091, 663);
             ((System.ComponentModel.ISupportInitialize)(this.bringCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hideTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.camDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaceOffice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.JakeOffice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UndyingOffice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +172,8 @@
         private System.Windows.Forms.Timer CamDownTimer;
         private System.Windows.Forms.PictureBox camDown;
         private System.Windows.Forms.Label amTimer;
+        private System.Windows.Forms.PictureBox FaceOffice;
+        private System.Windows.Forms.PictureBox JakeOffice;
+        private System.Windows.Forms.PictureBox UndyingOffice;
     }
 }
