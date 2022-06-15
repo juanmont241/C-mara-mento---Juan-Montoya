@@ -43,7 +43,7 @@ namespace Câmara_mento___Juan_Montoya
         {
             endTimer++;
 
-            Undying.move();
+           // Undying.move();
             SetUpMascots();
             clockTimer();
 

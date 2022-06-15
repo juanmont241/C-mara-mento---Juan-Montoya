@@ -35,7 +35,7 @@ namespace Câmara_mento___Juan_Montoya
 
             if (currentPostion == 4 && moveTimer == 0)
             {
-                RoofScreen.FaceCam.Visible = true;
+                //RoofScreen.FaceCam.Visible = true;
                 currentPostion = 2;
                 
                 if (GameMenuScreen.Difficulty == 1)
@@ -56,19 +56,19 @@ namespace Câmara_mento___Juan_Montoya
 
             else if (currentPostion == 2 && moveTimer == 0)
             {
-                RoofScreen.FaceCam.Visible = false;
-                OfficeScreen.FaceOffice.Visible = true;
+                //RoofScreen.FaceCam.Visible = false;
+                //OfficeScreen.FaceOffice.Visible = true;
                 currentPosition = 0;
             }
         }
 
-       void boolean kill(int killTimer, OfficeScreen k)
-        {
-            if (killTimer == 0)
-            {
+       //void boolean kill(int killTimer, OfficeScreen k)
+       // {
+       //     if (killTimer == 0)
+       //     {
 
-            }
-        }
+       //     }
+        //}
 
 
 
