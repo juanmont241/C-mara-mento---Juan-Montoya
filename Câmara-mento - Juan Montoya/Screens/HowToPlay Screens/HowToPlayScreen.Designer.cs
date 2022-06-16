@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HowToPlayScreen));
             this.generalLabel = new System.Windows.Forms.Label();
             this.mascotLabel = new System.Windows.Forms.Label();
             this.backLabel = new System.Windows.Forms.Label();
+            this.Transition = new System.Windows.Forms.PictureBox();
+            this.TransitionTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Transition)).BeginInit();
             this.SuspendLayout();
             // 
             // generalLabel
@@ -75,6 +80,23 @@
             this.backLabel.Text = "Back";
             this.backLabel.Click += new System.EventHandler(this.backLabel_Click);
             // 
+            // Transition
+            // 
+            this.Transition.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.Image = ((System.Drawing.Image)(resources.GetObject("Transition.Image")));
+            this.Transition.Location = new System.Drawing.Point(-2, -2);
+            this.Transition.Name = "Transition";
+            this.Transition.Size = new System.Drawing.Size(1091, 663);
+            this.Transition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Transition.TabIndex = 8;
+            this.Transition.TabStop = false;
+            // 
+            // TransitionTimer
+            // 
+            this.TransitionTimer.Enabled = true;
+            this.TransitionTimer.Interval = 200;
+            this.TransitionTimer.Tick += new System.EventHandler(this.TransitionTimer_Tick);
+            // 
             // HowToPlayScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -82,11 +104,13 @@
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.HowToPlay;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Controls.Add(this.Transition);
             this.Controls.Add(this.backLabel);
             this.Controls.Add(this.mascotLabel);
             this.Controls.Add(this.generalLabel);
             this.Name = "HowToPlayScreen";
             this.Size = new System.Drawing.Size(1087, 659);
+            ((System.ComponentModel.ISupportInitialize)(this.Transition)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +121,7 @@
         private System.Windows.Forms.Label generalLabel;
         private System.Windows.Forms.Label mascotLabel;
         private System.Windows.Forms.Label backLabel;
+        private System.Windows.Forms.PictureBox Transition;
+        private System.Windows.Forms.Timer TransitionTimer;
     }
 }

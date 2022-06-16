@@ -19,21 +19,25 @@ namespace Câmara_mento___Juan_Montoya
 
         private void cam1_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new LockerScreen());
         }
 
         private void cam2_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new CharPrepScreen());
         }
 
         private void cam5_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new RoofScreen());
         }
 
         private void bringOutCamera_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[1].Play(); // Plays CameraUp sound
             Form1.ChangeScreen(this, new OfficeScreen());
         }
 
@@ -90,7 +94,7 @@ namespace Câmara_mento___Juan_Montoya
 
         private void TurnOff_Click(object sender, EventArgs e)
         {
-
+            MenuScreen.gameSoundList[2].Play(); // Plays CameraShutOff sound
         }
     }
 }

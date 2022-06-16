@@ -19,35 +19,26 @@ namespace Câmara_mento___Juan_Montoya
 
         private void generalLabel_Click(object sender, EventArgs e)
         {
-            GeneralScreen gs = new GeneralScreen();
-            Form form = this.FindForm();
-
-            form.Controls.Add(gs);
-            form.Controls.Remove(this);
-
-            gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
+            Form1.ChangeScreen(this, new GeneralScreen());
         }
 
         private void mascotLabel_Click(object sender, EventArgs e)
         {
-            MascotScreen ms = new MascotScreen();
-            Form form = this.FindForm();
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
+            Form1.ChangeScreen(this, new MascotScreen());
 
-            form.Controls.Add(ms);
-            form.Controls.Remove(this);
-
-            ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
         }
 
         private void backLabel_Click(object sender, EventArgs e)
         {
-            MenuScreen ms = new MenuScreen();
-            Form form = this.FindForm();
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
+            Form1.ChangeScreen(this, new MenuScreen());
+        }
 
-            form.Controls.Add(ms);
-            form.Controls.Remove(this);
-
-            ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+        private void TransitionTimer_Tick(object sender, EventArgs e)
+        {
+            Transition.Visible = false;
         }
     }
 }

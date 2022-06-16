@@ -97,11 +97,13 @@ namespace Câmara_mento___Juan_Montoya
 
         private void bringCamera_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[1].Play(); // Plays CameraUp Sound
             Form1.ChangeScreen(this, new CameraWaitScreen());
         }
 
         private void hideTable_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[3].Play(); // Plays HideTable Sound
             Form1.ChangeScreen(this, new TableScreen());
         }
 

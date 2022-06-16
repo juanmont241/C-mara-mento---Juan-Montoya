@@ -61,6 +61,15 @@ namespace Câmara_mento___Juan_Montoya.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _6am {
+            get {
+                return ResourceManager.GetStream("_6am", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Bring_Up_Monitor {
@@ -71,12 +80,20 @@ namespace Câmara_mento___Juan_Montoya.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap Cam_Change {
+        internal static System.IO.UnmanagedMemoryStream Camchange {
             get {
-                object obj = ResourceManager.GetObject("Cam_Change", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("Camchange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream CAMOFF {
+            get {
+                return ResourceManager.GetStream("CAMOFF", resourceCulture);
             }
         }
         
@@ -171,6 +188,15 @@ namespace Câmara_mento___Juan_Montoya.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pickupcam {
+            get {
+                return ResourceManager.GetStream("Pickupcam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Roof {
@@ -197,6 +223,24 @@ namespace Câmara_mento___Juan_Montoya.Properties {
             get {
                 object obj = ResourceManager.GetObject("TableButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TableDown {
+            get {
+                return ResourceManager.GetStream("TableDown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream TableUp {
+            get {
+                return ResourceManager.GetStream("TableUp", resourceCulture);
             }
         }
         

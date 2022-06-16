@@ -22,6 +22,7 @@ namespace Câmara_mento___Juan_Montoya
 
         private void easyLabel_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new OfficeScreen());
 
             Mascot.moveTimer = randGen.Next(800, 1000);
@@ -31,6 +32,7 @@ namespace Câmara_mento___Juan_Montoya
 
         private void mediumLabel_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new OfficeScreen());
 
             Mascot.moveTimer = randGen.Next(500, 700);
@@ -40,6 +42,7 @@ namespace Câmara_mento___Juan_Montoya
 
         private void hardLabel_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new OfficeScreen());
 
             Mascot.moveTimer = randGen.Next(300, 500);
@@ -50,12 +53,14 @@ namespace Câmara_mento___Juan_Montoya
 
         private void endlessLabel_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new OfficeScreen());
 
         }
 
         private void backhtpLabel_Click(object sender, EventArgs e)
         {
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             MenuScreen ms = new MenuScreen();
             Form form = this.FindForm();
 

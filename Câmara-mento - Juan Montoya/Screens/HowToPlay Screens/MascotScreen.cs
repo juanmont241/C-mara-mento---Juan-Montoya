@@ -19,13 +19,13 @@ namespace Câmara_mento___Juan_Montoya
 
         private void backLabel_Click(object sender, EventArgs e)
         {
-            MenuScreen ms = new MenuScreen();
-            Form form = this.FindForm();
+            MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
+            Form1.ChangeScreen(this, new HowToPlayScreen());
+        }
 
-            form.Controls.Add(ms);
-            form.Controls.Remove(this);
-
-            ms.Location = new Point((form.Width - ms.Width) / 2, (form.Height - ms.Height) / 2);
+        private void TransitionTimer_Tick(object sender, EventArgs e)
+        {
+            Transition.Visible = false;
         }
     }
 }

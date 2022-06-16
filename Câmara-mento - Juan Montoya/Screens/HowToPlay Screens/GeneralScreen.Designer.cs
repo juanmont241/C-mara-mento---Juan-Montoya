@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneralScreen));
             this.backLabel = new System.Windows.Forms.Label();
+            this.Transition = new System.Windows.Forms.PictureBox();
+            this.TransitionTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Transition)).BeginInit();
             this.SuspendLayout();
             // 
             // backLabel
@@ -45,6 +50,23 @@
             this.backLabel.Text = "Back";
             this.backLabel.Click += new System.EventHandler(this.backLabel_Click);
             // 
+            // Transition
+            // 
+            this.Transition.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.Image = ((System.Drawing.Image)(resources.GetObject("Transition.Image")));
+            this.Transition.Location = new System.Drawing.Point(-2, -2);
+            this.Transition.Name = "Transition";
+            this.Transition.Size = new System.Drawing.Size(1087, 659);
+            this.Transition.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Transition.TabIndex = 7;
+            this.Transition.TabStop = false;
+            // 
+            // TransitionTimer
+            // 
+            this.TransitionTimer.Enabled = true;
+            this.TransitionTimer.Interval = 200;
+            this.TransitionTimer.Tick += new System.EventHandler(this.TransitionTimer_Tick);
+            // 
             // GeneralScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -53,8 +75,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.backLabel);
+            this.Controls.Add(this.Transition);
             this.Name = "GeneralScreen";
             this.Size = new System.Drawing.Size(1083, 655);
+            ((System.ComponentModel.ISupportInitialize)(this.Transition)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -63,5 +87,7 @@
         #endregion
 
         private System.Windows.Forms.Label backLabel;
+        private System.Windows.Forms.PictureBox Transition;
+        private System.Windows.Forms.Timer TransitionTimer;
     }
 }

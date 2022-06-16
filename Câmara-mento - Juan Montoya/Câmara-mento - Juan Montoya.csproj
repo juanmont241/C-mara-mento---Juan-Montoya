@@ -262,5 +262,26 @@
   <ItemGroup>
     <None Include="Resources\VictoryScreen .png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camchange.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAMOFF.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FNaTI 2_ Original Revamp - All DUMPscares %28128 kbps%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pickupcam.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableDown.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TableUp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6am.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

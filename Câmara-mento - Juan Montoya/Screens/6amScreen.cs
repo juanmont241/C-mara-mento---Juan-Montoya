@@ -14,6 +14,7 @@ namespace Câmara_mento___Juan_Montoya
     {
         public _6amScreen()
         {
+            MenuScreen.gameSoundList[5].Play(); //Plays 6am sound
             InitializeComponent();
         }
 
