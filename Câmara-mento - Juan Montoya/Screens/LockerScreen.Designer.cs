@@ -40,6 +40,7 @@
             this.amTimer = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TurnOff = new System.Windows.Forms.PictureBox();
+            this.Loadbutton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam5)).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Loadbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // cam6
@@ -150,6 +152,17 @@
             this.TurnOff.TabStop = false;
             this.TurnOff.Click += new System.EventHandler(this.TurnOff_Click);
             // 
+            // Loadbutton
+            // 
+            this.Loadbutton.Image = ((System.Drawing.Image)(resources.GetObject("Loadbutton.Image")));
+            this.Loadbutton.Location = new System.Drawing.Point(620, 530);
+            this.Loadbutton.Name = "Loadbutton";
+            this.Loadbutton.Size = new System.Drawing.Size(110, 92);
+            this.Loadbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Loadbutton.TabIndex = 15;
+            this.Loadbutton.TabStop = false;
+            this.Loadbutton.Visible = false;
+            // 
             // LockerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -157,6 +170,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Locker_Room;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.Loadbutton);
             this.Controls.Add(this.TurnOff);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.amTimer);
@@ -176,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Loadbutton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +208,6 @@
         private System.Windows.Forms.Label amTimer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox TurnOff;
+        private System.Windows.Forms.PictureBox Loadbutton;
     }
 }

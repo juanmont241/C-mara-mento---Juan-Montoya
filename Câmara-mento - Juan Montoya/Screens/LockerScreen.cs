@@ -95,6 +95,20 @@ namespace Câmara_mento___Juan_Montoya
         private void TurnOff_Click(object sender, EventArgs e)
         {
             MenuScreen.gameSoundList[2].Play(); // Plays CameraShutOff sound
+            TurnOff.Visible = false;
+            Loadbutton.Visible = true;
+            OfficeScreen.CameraClicked = 1;
+            OfficeScreen.CameraClicked = 0;
+
+            OfficeScreen.cameraloadTimer--;
+
+            if (OfficeScreen.cameraloadTimer == 0)
+            {
+                Loadbutton.Visible = false;
+                TurnOff.Visible = true;
+                OfficeScreen.cameraloadTimer = 100;
+            }
+
         }
     }
 }

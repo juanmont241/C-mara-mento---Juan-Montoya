@@ -39,6 +39,7 @@
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.amTimer = new System.Windows.Forms.Label();
             this.FaceCam = new System.Windows.Forms.PictureBox();
+            this.TurnOff = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam5)).BeginInit();
@@ -46,6 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceCam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).BeginInit();
             this.SuspendLayout();
             // 
             // cam6
@@ -140,6 +142,16 @@
             this.FaceCam.TabStop = false;
             this.FaceCam.Visible = false;
             // 
+            // TurnOff
+            // 
+            this.TurnOff.Image = ((System.Drawing.Image)(resources.GetObject("TurnOff.Image")));
+            this.TurnOff.Location = new System.Drawing.Point(617, 522);
+            this.TurnOff.Name = "TurnOff";
+            this.TurnOff.Size = new System.Drawing.Size(110, 92);
+            this.TurnOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TurnOff.TabIndex = 15;
+            this.TurnOff.TabStop = false;
+            // 
             // RoofScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,6 +159,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Roof;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.TurnOff);
             this.Controls.Add(this.amTimer);
             this.Controls.Add(this.bringOutCamera);
             this.Controls.Add(this.cam6);
@@ -164,6 +177,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.camMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceCam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +194,6 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label amTimer;
         private System.Windows.Forms.PictureBox FaceCam;
+        private System.Windows.Forms.PictureBox TurnOff;
     }
 }

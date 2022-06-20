@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Câmara_mento___Juan_Montoya
 {
@@ -23,7 +24,7 @@ namespace Câmara_mento___Juan_Montoya
             killTimer = _killTimer;
         }
 
-        void move(int currentPosition, OfficeScreen m)
+        public void move(int currentPosition)
         {
             moveTimer--;
 
@@ -37,21 +38,8 @@ namespace Câmara_mento___Juan_Montoya
             {
                 //RoofScreen.FaceCam.Visible = true;
                 currentPostion = 2;
-                
-                if (GameMenuScreen.Difficulty == 1)
-                {
-                    moveTimer = randGen.Next(800, 1000);
-                }
-
-                else if (GameMenuScreen.Difficulty == 2)
-                {
-                    moveTimer = randGen.Next(500, 700);
-                }
-
-                else if (GameMenuScreen.Difficulty == 3)
-                {
-                    moveTimer = randGen.Next(300, 500);
-                }
+                ResetMovement();
+         
             }
 
             else if (currentPostion == 2 && moveTimer == 0)
@@ -59,16 +47,75 @@ namespace Câmara_mento___Juan_Montoya
                 //RoofScreen.FaceCam.Visible = false;
                 //OfficeScreen.FaceOffice.Visible = true;
                 currentPosition = 0;
+                ResetMovement();
+
             }
         }
 
-       //void boolean kill(int killTimer, OfficeScreen k)
-       // {
-       //     if (killTimer == 0)
-       //     {
+        public void kill(int killTimer, int attackType, UserControl uc) //<<-- Make 3 diffrent move methods and kill methods for each suit so usercontrol works
+        {
+            killTimer--;
 
-       //     }
-        //}
+            if (attackType == 1)
+            {
+               if (OfficeScreen.CameraClicked == 1)
+                {
+                    uc.Visible = false;
+                    //OfficeScreen.JakeOffice.Visible = false;
+                    ResetMovement();
+                    OfficeScreen.TheFaceInOffice = 0;
+                    OfficeScreen.JakeInOffice = 0;
+                }
+
+               else
+                {
+                    if (killTimer == 0 && OfficeScreen.TheFaceInOffice == 1)
+                    {
+                        Form1.ChangeScreen(this, new GameOverScreen());
+
+                    }
+
+                    else if (killTimer == 0 && OfficeScreen.JakeInOffice == 1)
+                    {
+                        Form1.ChangeScreen(this, new GameOverScreen());
+                    }
+                }
+            }
+
+            else if (attackType == 2)
+            {
+                if (OfficeScreen.HidingTable == 1)
+                {
+                    //OfficeScreen.UndyingOffice.Visible = false;
+                    ResetMovement();
+                }
+
+                else if (killTimer == 0 && OfficeScreen.UndyingInOffice == 1)
+                {
+                    Form1.ChangeScreen(this, new GameOverScreen());
+                }
+            }
+        }
+
+        public void ResetMovement()
+        {
+            if (GameMenuScreen.Difficulty == 1)
+            {
+                moveTimer = randGen.Next(800, 1000);
+            }
+
+            else if (GameMenuScreen.Difficulty == 2)
+            {
+                moveTimer = randGen.Next(500, 700);
+            }
+
+            else if (GameMenuScreen.Difficulty == 3)
+            {
+                moveTimer = randGen.Next(300, 500);
+            }
+        }
+
+
 
 
 

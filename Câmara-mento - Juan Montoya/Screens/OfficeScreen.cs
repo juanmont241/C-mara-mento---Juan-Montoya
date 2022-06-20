@@ -12,7 +12,8 @@ namespace Câmara_mento___Juan_Montoya
 {
     public partial class OfficeScreen : UserControl
     {
-        public static int endTimer;
+        public static int endTimer, TheFaceInOffice, UndyingInOffice, JakeInOffice;
+        public static int cameraloadTimer = 100, CameraClicked = 0, HidingTable = 0;
 
         Mascot Undying;
         Mascot Bridget;
@@ -30,8 +31,9 @@ namespace Câmara_mento___Juan_Montoya
 
        public void SetUpMascots()
         {
+            // (First Int) 1=Camera Shut Down, 2=Hide Under Table
             //
-            //  0=Office,  1=Char Prep,   2=Roof,   3=Locker,   4=OutOfBounds(Face),  5=OutOfBounds(Jake),   6=OutOfBounds(Undying)
+            // (Second Int) 0=Office,  1=Char Prep,   2=Roof,   3=Locker,   4=OutOfBounds(Face),  5=OutOfBounds(Jake),   6=OutOfBounds(Undying)
             //
             Undying = new Mascot(2, 6, Mascot.moveTimer, Mascot.killTimer);
             Jake = new Mascot(1, 5, Mascot.moveTimer, Mascot.killTimer);
@@ -42,11 +44,27 @@ namespace Câmara_mento___Juan_Montoya
         private void gameTimer_Tick(object sender, EventArgs e)
         {
             endTimer++;
-
-           // Undying.move();
             SetUpMascots();
             clockTimer();
 
+            Undying.move(6);
+            Jake.move(5);
+            TheFace.move(4);
+
+            if (TheFaceInOffice == 1)
+            {
+                TheFace.kill(Mascot.killTimer, 1, this);
+            }
+
+            else if (JakeInOffice == 1)
+            {
+                Jake.kill(Mascot.killTimer, 1);
+            }
+
+            else if (UndyingInOffice == 1)
+            {
+                Undying.kill(Mascot.killTimer, 2);
+            }
 
         }
 
@@ -104,6 +122,7 @@ namespace Câmara_mento___Juan_Montoya
         private void hideTable_Click(object sender, EventArgs e)
         {
             MenuScreen.gameSoundList[3].Play(); // Plays HideTable Sound
+            OfficeScreen.HidingTable = 1;
             Form1.ChangeScreen(this, new TableScreen());
         }
 
