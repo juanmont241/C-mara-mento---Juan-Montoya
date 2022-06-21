@@ -45,7 +45,7 @@ namespace Câmara_mento___Juan_Montoya
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            OfficeScreen.endTimer++;
+            //OfficeScreen.endTimer++;
 
             clockTimer();
         }
@@ -92,6 +92,25 @@ namespace Câmara_mento___Juan_Montoya
         public void victoryResults()
         {
             Form1.ChangeScreen(this, new _6amScreen());
+        }
+
+        private void TurnOff_Click_1(object sender, EventArgs e)
+        {
+            MenuScreen.gameSoundList[2].Play(); // Plays CameraShutOff sound
+            TurnOff.Visible = false;
+            Loadbutton.Visible = true;
+            OfficeScreen.CameraClicked = 1;
+
+
+            OfficeScreen.cameraloadTimer--;
+
+            if (OfficeScreen.cameraloadTimer == 1)
+            {
+                Loadbutton.Visible = false;
+                TurnOff.Visible = true;
+                OfficeScreen.CameraClicked = 0;
+                OfficeScreen.cameraloadTimer = 100;
+            }
         }
     }
 }

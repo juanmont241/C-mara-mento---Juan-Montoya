@@ -10,7 +10,7 @@ namespace Câmara_mento___Juan_Montoya
     internal class Mascot
     {
         Random randGen = new Random(); //Declaring the Random Genrator
-        
+
         public static int attackType;
         public static int currentPostion;
         public static int moveTimer;
@@ -24,7 +24,33 @@ namespace Câmara_mento___Juan_Montoya
             killTimer = _killTimer;
         }
 
-        public void move(int currentPosition)
+        void ResetMovement()
+        {
+            if (GameMenuScreen.Difficulty == 1)
+            {
+                Mascot.moveTimer = randGen.Next(800, 1000);
+                Mascot.killTimer = randGen.Next(800, 1000);
+            }
+
+            else if (GameMenuScreen.Difficulty == 2) {
+                Mascot.moveTimer = randGen.Next(500, 700);
+                Mascot.killTimer = randGen.Next(400, 600);
+            }
+
+            else if (GameMenuScreen.Difficulty == 3)
+            {
+                Mascot.moveTimer = randGen.Next(300, 500);
+                Mascot.killTimer = randGen.Next(300, 500);
+            }
+
+            else if (GameMenuScreen.Difficulty == 4)
+            {
+                Mascot.moveTimer = randGen.Next(300, 500);
+                Mascot.killTimer = randGen.Next(300, 500);
+            }
+        }
+
+        public void moveTheFace(int currentPosition, UserControl uc)
         {
             moveTimer--;
 
@@ -36,17 +62,18 @@ namespace Câmara_mento___Juan_Montoya
 
             if (currentPostion == 4 && moveTimer == 0)
             {
-                //RoofScreen.FaceCam.Visible = true;
+                uc.Visible = true; //Roofscreen
                 currentPostion = 2;
                 ResetMovement();
-         
+
             }
 
             else if (currentPostion == 2 && moveTimer == 0)
             {
-                //RoofScreen.FaceCam.Visible = false;
-                //OfficeScreen.FaceOffice.Visible = true;
+                uc.Visible = false; //Roofscreen
+                uc.Visible = true; //Officescreen
                 currentPosition = 0;
+                OfficeScreen.TheFaceInOffice = 1;
                 ResetMovement();
 
             }
@@ -58,67 +85,73 @@ namespace Câmara_mento___Juan_Montoya
 
             if (attackType == 1)
             {
-               if (OfficeScreen.CameraClicked == 1)
+                if (OfficeScreen.CameraClicked == 1)
                 {
                     uc.Visible = false;
-                    //OfficeScreen.JakeOffice.Visible = false;
                     ResetMovement();
                     OfficeScreen.TheFaceInOffice = 0;
-                    OfficeScreen.JakeInOffice = 0;
+                    currentPostion = 6;
+
                 }
 
-               else
+                else if (attackType == 2)
                 {
-                    if (killTimer == 0 && OfficeScreen.TheFaceInOffice == 1)
+                    if (OfficeScreen.CameraClicked == 1)
                     {
-                        Form1.ChangeScreen(this, new GameOverScreen());
-
+                        uc.Visible = false;
+                        ResetMovement();
+                        OfficeScreen.JakeInOffice = 0;
+                        currentPostion = 5;
                     }
 
-                    else if (killTimer == 0 && OfficeScreen.JakeInOffice == 1)
+                    else
                     {
-                        Form1.ChangeScreen(this, new GameOverScreen());
+                        if (killTimer == 0 && OfficeScreen.TheFaceInOffice == 1)
+                        {
+                            Form1.ChangeScreen(this, new GameOverScreen());
+
+                        if (killTimer == 0 && OfficeScreen.TheFaceInOffice == 1 && GameMenuScreen.normalGame == 0)
+                            {
+                                Form1.ChangeScreen(this, new HighScoreScreen());
+                            }
+
+                        }
+
+                        else if (killTimer == 0 && OfficeScreen.JakeInOffice == 1)
+                        {
+                            Form1.ChangeScreen(this, new GameOverScreen());
+                        }
+
+                        if (killTimer == 0 && OfficeScreen.JakeInOffice == 1 && GameMenuScreen.normalGame == 0)
+                        {
+                            Form1.ChangeScreen(this, new HighScoreScreen());
+                        }
+
+
+
+                        else if (attackType == 3)
+                        {
+                            if (OfficeScreen.HidingTable == 1)
+                            {
+                                uc.Visible = false;
+                                ResetMovement();
+                            }
+
+                            else if (killTimer == 0 && OfficeScreen.UndyingInOffice == 1)
+                            {
+                                Form1.ChangeScreen(this, new GameOverScreen());
+                            }
+
+                            else if (killTimer == 0 && OfficeScreen.UndyingInOffice == 1 && GameMenuScreen.normalGame == 0)
+                            {
+                                Form1.ChangeScreen(this, new HighScoreScreen());
+                            }
+
+                        }
+
                     }
-                }
-            }
-
-            else if (attackType == 2)
-            {
-                if (OfficeScreen.HidingTable == 1)
-                {
-                    //OfficeScreen.UndyingOffice.Visible = false;
-                    ResetMovement();
-                }
-
-                else if (killTimer == 0 && OfficeScreen.UndyingInOffice == 1)
-                {
-                    Form1.ChangeScreen(this, new GameOverScreen());
                 }
             }
         }
-
-        public void ResetMovement()
-        {
-            if (GameMenuScreen.Difficulty == 1)
-            {
-                moveTimer = randGen.Next(800, 1000);
-            }
-
-            else if (GameMenuScreen.Difficulty == 2)
-            {
-                moveTimer = randGen.Next(500, 700);
-            }
-
-            else if (GameMenuScreen.Difficulty == 3)
-            {
-                moveTimer = randGen.Next(300, 500);
-            }
-        }
-
-
-
-
-
-
     }
 }

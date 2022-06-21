@@ -52,6 +52,12 @@
     <Compile Include="GameOverScreen.Designer.cs">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighScoreScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HighScoreScreen.Designer.cs">
+      <DependentUpon>HighScoreScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\6amScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="GameOverScreen.resx">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreScreen.resx">
+      <DependentUpon>HighScoreScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\6amScreen.resx">
       <DependentUpon>6amScreen.cs</DependentUpon>
@@ -291,6 +300,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\6am.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XMLFile1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

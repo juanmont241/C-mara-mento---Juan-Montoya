@@ -15,7 +15,6 @@ namespace Câmara_mento___Juan_Montoya
         public Form1()
         {
             InitializeComponent();
-
            // FormBorderStyle = FormBorderStyle.None; //Makes the form to fullscreen
            // WindowState = FormWindowState.Maximized;
 

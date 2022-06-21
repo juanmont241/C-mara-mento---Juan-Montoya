@@ -40,6 +40,7 @@
             this.amTimer = new System.Windows.Forms.Label();
             this.FaceCam = new System.Windows.Forms.PictureBox();
             this.TurnOff = new System.Windows.Forms.PictureBox();
+            this.Loadbutton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cam6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cam5)).BeginInit();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceCam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Loadbutton)).BeginInit();
             this.SuspendLayout();
             // 
             // cam6
@@ -151,6 +153,18 @@
             this.TurnOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TurnOff.TabIndex = 15;
             this.TurnOff.TabStop = false;
+            this.TurnOff.Click += new System.EventHandler(this.TurnOff_Click_1);
+            // 
+            // Loadbutton
+            // 
+            this.Loadbutton.Image = ((System.Drawing.Image)(resources.GetObject("Loadbutton.Image")));
+            this.Loadbutton.Location = new System.Drawing.Point(617, 510);
+            this.Loadbutton.Name = "Loadbutton";
+            this.Loadbutton.Size = new System.Drawing.Size(110, 92);
+            this.Loadbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Loadbutton.TabIndex = 16;
+            this.Loadbutton.TabStop = false;
+            this.Loadbutton.Visible = false;
             // 
             // RoofScreen
             // 
@@ -159,6 +173,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Câmara_mento___Juan_Montoya.Properties.Resources.Roof;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.Loadbutton);
             this.Controls.Add(this.TurnOff);
             this.Controls.Add(this.amTimer);
             this.Controls.Add(this.bringOutCamera);
@@ -178,6 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bringOutCamera)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FaceCam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TurnOff)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Loadbutton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +211,6 @@
         private System.Windows.Forms.Label amTimer;
         private System.Windows.Forms.PictureBox FaceCam;
         private System.Windows.Forms.PictureBox TurnOff;
+        private System.Windows.Forms.PictureBox Loadbutton;
     }
 }

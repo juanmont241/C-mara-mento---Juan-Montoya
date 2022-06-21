@@ -19,7 +19,7 @@ namespace Câmara_mento___Juan_Montoya
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            OfficeScreen.endTimer++;
+          //  OfficeScreen.endTimer++;
 
             clockTimer();
         }

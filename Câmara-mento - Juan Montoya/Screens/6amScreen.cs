@@ -22,5 +22,10 @@ namespace Câmara_mento___Juan_Montoya
         {
             _6am.Visible = false;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new MenuScreen());
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Câmara_mento___Juan_Montoya
     public partial class GameMenuScreen : UserControl
     {
         Random randGen = new Random(); //Declaring the Random Genrator
-        public static int Difficulty;
+        public static int Difficulty, normalGame = 1, SurviorTimer;
 
         public GameMenuScreen()
         {
@@ -45,8 +45,8 @@ namespace Câmara_mento___Juan_Montoya
             MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new OfficeScreen());
 
-            Mascot.moveTimer = randGen.Next(300, 500);
-            Mascot.killTimer = randGen.Next(300, 500);
+            Mascot.moveTimer = randGen.Next(100, 200);
+            Mascot.killTimer = randGen.Next(200, 300);
             Difficulty = 3;
 
         }
@@ -55,6 +55,9 @@ namespace Câmara_mento___Juan_Montoya
         {
             MenuScreen.gameSoundList[0].Play(); // Plays Camera Swtich sound
             Form1.ChangeScreen(this, new OfficeScreen());
+
+            Difficulty = 4;
+            normalGame = 0;
 
         }
 

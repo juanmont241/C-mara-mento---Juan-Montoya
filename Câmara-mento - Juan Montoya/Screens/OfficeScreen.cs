@@ -16,7 +16,6 @@ namespace Câmara_mento___Juan_Montoya
         public static int cameraloadTimer = 100, CameraClicked = 0, HidingTable = 0;
 
         Mascot Undying;
-        Mascot Bridget;
         Mascot TheFace;
         Mascot Jake;
 
@@ -35,21 +34,25 @@ namespace Câmara_mento___Juan_Montoya
             //
             // (Second Int) 0=Office,  1=Char Prep,   2=Roof,   3=Locker,   4=OutOfBounds(Face),  5=OutOfBounds(Jake),   6=OutOfBounds(Undying)
             //
-            Undying = new Mascot(2, 6, Mascot.moveTimer, Mascot.killTimer);
-            Jake = new Mascot(1, 5, Mascot.moveTimer, Mascot.killTimer);
+            Undying = new Mascot(3, 6, Mascot.moveTimer, Mascot.killTimer);
+            Jake = new Mascot(2, 5, Mascot.moveTimer, Mascot.killTimer);
             TheFace = new Mascot(1, 4, Mascot.moveTimer, Mascot.killTimer);
             
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            endTimer++;
-            SetUpMascots();
-            clockTimer();
+            if (GameMenuScreen.normalGame == 1)
+            {
+                endTimer++;
+                clockTimer();
+            }
 
-            Undying.move(6);
-            Jake.move(5);
-            TheFace.move(4);
+            GameMenuScreen.SurviorTimer++;
+            SetUpMascots();
+            
+            TheFace.moveTheFace(4, this);
+
 
             if (TheFaceInOffice == 1)
             {
@@ -58,12 +61,12 @@ namespace Câmara_mento___Juan_Montoya
 
             else if (JakeInOffice == 1)
             {
-                Jake.kill(Mascot.killTimer, 1);
+                Jake.kill(Mascot.killTimer, 1, this);
             }
 
             else if (UndyingInOffice == 1)
             {
-                Undying.kill(Mascot.killTimer, 2);
+                Undying.kill(Mascot.killTimer, 2, this);
             }
 
         }
