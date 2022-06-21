@@ -16,5 +16,10 @@ namespace Câmara_mento___Juan_Montoya
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Form1.ChangeScreen(this, new MenuScreen());
+        }
     }
 }
